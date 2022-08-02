@@ -33,7 +33,7 @@ public class SplashScreen extends AppCompatActivity {
         title.setAnimation(bottom_anim);
         slogan.setAnimation(bottom_anim);
 
-        int Splash_screen = 4300;
+        int Splash_screen = 4800;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
