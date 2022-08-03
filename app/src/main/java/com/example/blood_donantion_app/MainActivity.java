@@ -70,9 +70,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                     String type = snapshot.child("type").getValue().toString();
                     nav_type.setText(type);
-                    String imageurl = snapshot.child("profilepictureuri").getValue().toString();
+                    if (snapshot.hasChild("profilepictureuri"))
+                    {
+                        String imageurl = snapshot.child("profilepictureuri").getValue().toString();
+                        Glide.with(getApplicationContext()).load(imageurl).into(profile);
+                    }
+                    else {
+                        profile.setImageResource(R.drawable.profile);;
+                    }
 
-                    Glide.with(getApplicationContext()).load(imageurl).into(profile);
                 }
             }
 
@@ -101,6 +107,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
            case R.id.pofile:
                startActivity(new Intent(MainActivity.this, Profile.class));
                finish();
+
+           case R.id.logout:
+               FirebaseAuth mAuth = FirebaseAuth.getInstance();
+               mAuth.signOut();
        }
        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
