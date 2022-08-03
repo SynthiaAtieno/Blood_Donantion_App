@@ -107,12 +107,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
            case R.id.pofile:
                startActivity(new Intent(MainActivity.this, Profile.class));
                finish();
+               break;
 
            case R.id.logout:
                FirebaseAuth mAuth = FirebaseAuth.getInstance();
                mAuth.signOut();
                startActivity(new Intent(MainActivity.this, Login.class));
                finish();
+               break;
        }
        drawerLayout.closeDrawer(GravityCompat.START);
         return true;

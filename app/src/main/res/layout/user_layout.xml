@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainLayout"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userprofileimag"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/profile"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_margin="2dp">
+            <TextView
+                android:id="@+id/usertype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/useremail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/useridnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/userphonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:layout_margin="5dp"
+                />
+            <TextView
+                android:id="@+id/userbloodgroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:layout_margin="5dp"
+                />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/emailNow"
+            android:text="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/mainLayout"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"/>
+
+</RelativeLayout>

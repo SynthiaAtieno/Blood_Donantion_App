@@ -56,13 +56,19 @@ public class Profile extends AppCompatActivity {
                 {
                     type.setText(snapshot.child("type").getValue().toString());
                     name.setText(snapshot.child("name").getValue().toString());
-                    idnumber.setText(snapshot.child("id").getValue().toString());
+                    idnumber.setText(snapshot.child("idNumber").getValue().toString());
                     bloodgroup.setText(snapshot.child("bloodgroup").getValue().toString());
                     email.setText(snapshot.child("email").getValue().toString());
                     phonenumber.setText(snapshot.child("phoneNo").getValue().toString());
-                    String imageUrl = snapshot.child("profilepictureuri").getValue().toString();
+                    if (snapshot.hasChild("profilepictureuri"))
+                    {
+                        String imageUrl = snapshot.child("profilepictureuri").getValue().toString();
+                        Glide.with(getApplicationContext()).load(imageUrl).into(profile);
 
-                    Glide.with(getApplicationContext()).load(imageUrl).into(profile);
+                    }
+                    else {
+                        profile.setImageResource(R.drawable.profile);
+                    }
                 }
             }
 
