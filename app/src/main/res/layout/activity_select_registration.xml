@@ -33,6 +33,7 @@
                 />
 
             <TextView
+                android:id="@+id/alredyHaveAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hello, Welcome To Blood Donation App"

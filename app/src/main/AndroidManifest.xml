@@ -14,6 +14,15 @@
         android:theme="@style/Theme.Blood_Donantion_App"
         tools:targetApi="31">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Recipient_Registarion"
+            android:exported="false" />
+        <activity
             android:name=".DonorRegistration"
             android:exported="false" />
         <activity

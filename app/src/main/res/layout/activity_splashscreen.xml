@@ -11,6 +11,8 @@
     android:gravity="center_vertical"
     tools:context=".SplashScreen">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
