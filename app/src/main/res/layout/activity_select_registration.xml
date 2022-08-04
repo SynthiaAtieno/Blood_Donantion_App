@@ -76,7 +76,7 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/reciepient_btn"
-                    android:text="Reciepient Registration"
+                    android:text="Recipient Registration"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#fff"

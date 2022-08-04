@@ -37,7 +37,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Reciepient Registration"
+                android:text="Recipient Registration"
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:gravity="center"

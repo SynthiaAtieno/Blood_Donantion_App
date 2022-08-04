@@ -37,16 +37,16 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final Users users = usersList.get(position);
-        holder.usertype.setText(users.getType());
-        if (users.getType().equals("Donor"))
+         Users users = usersList.get(position);
+        holder.usertypes.setText(users.getType());
+        if (users.getType().equalsIgnoreCase("Donor"))
         {
             holder.emailBtn.setVisibility(View.GONE);
         }
-        holder.useremail.setText(users.getType());
-        holder.username.setText(users.getType());
-        holder.userbloodgroup.setText(users.getType());
-        holder.userphone.setText(users.getType());
+        holder.useremails.setText(users.getEmail());
+        holder.usernames.setText(users.getName());
+        holder.userbloodgroups.setText(users.getBloodgroup());
+        holder.userphones.setText(users.getPhoneNo());
 
         Glide.with(context).load(users.getProfilePictureurl()).into(holder.profileimage);
 
@@ -59,17 +59,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     public  class  ViewHolder extends RecyclerView.ViewHolder {
         public CircleImageView profileimage;
-        public TextView username, userphone, userbloodgroup, usertype, useremail;
+        public TextView usernames, userphones, userbloodgroups, usertypes, useremails;
         AppCompatButton emailBtn;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             profileimage = itemView.findViewById(R.id.profileImage);
-            useremail = itemView.findViewById(R.id.useremail);
-            userphone = itemView.findViewById(R.id.userphonenumber);
-            username = itemView.findViewById(R.id.username);
-            userbloodgroup = itemView.findViewById(R.id.userbloodgroup);
-            usertype = itemView.findViewById(R.id.usertype);
+            useremails = itemView.findViewById(R.id.useremail);
+            userphones = itemView.findViewById(R.id.userphonenumber);
+            usernames = itemView.findViewById(R.id.username);
+            userbloodgroups = itemView.findViewById(R.id.userbloodgroup);
+            usertypes = itemView.findViewById(R.id.usertype);
             emailBtn = itemView.findViewById(R.id.emailNow);
         }
     }

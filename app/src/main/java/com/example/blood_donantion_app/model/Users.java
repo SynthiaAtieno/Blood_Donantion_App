@@ -1,7 +1,7 @@
 package com.example.blood_donantion_app.model;
 
 public class Users {
-    String name, bloodgroup, id, email, type, phoneNo, idNumber, search, profilePictureurl;
+    String name, bloodgroup,id, email, type, phoneNo, idNumber, search, profilePictureurl;
 
     public Users() {
     }
