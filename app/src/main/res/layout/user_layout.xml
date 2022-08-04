@@ -54,16 +54,6 @@
                 android:textAllCaps="false"
                 android:layout_margin="5dp"
                 />
-            <TextView
-                android:id="@+id/useridnumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:textAllCaps="false"
-                android:layout_margin="5dp"
-                />
 
             <TextView
                 android:id="@+id/userphonenumber"
