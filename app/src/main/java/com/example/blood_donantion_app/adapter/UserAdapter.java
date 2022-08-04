@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.blood_donantion_app.R;
 import com.example.blood_donantion_app.model.Users;
 
@@ -36,17 +37,29 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        final Users users = usersList.get(position);
+        holder.usertype.setText(users.getType());
+        if (users.getType().equals("Donor"))
+        {
+            holder.emailBtn.setVisibility(View.GONE);
+        }
+        holder.useremail.setText(users.getType());
+        holder.username.setText(users.getType());
+        holder.userbloodgroup.setText(users.getType());
+        holder.userphone.setText(users.getType());
+
+        Glide.with(context).load(users.getProfilePictureurl()).into(holder.profileimage);
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return usersList.size();
     }
 
     public  class  ViewHolder extends RecyclerView.ViewHolder {
         public CircleImageView profileimage;
-        public TextView username, userphone, useridno, usertype, useremail;
+        public TextView username, userphone, userbloodgroup, usertype, useremail;
         AppCompatButton emailBtn;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -55,7 +68,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             useremail = itemView.findViewById(R.id.useremail);
             userphone = itemView.findViewById(R.id.userphonenumber);
             username = itemView.findViewById(R.id.username);
-            useridno = itemView.findViewById(R.id.useridnumber);
+            userbloodgroup = itemView.findViewById(R.id.userbloodgroup);
             usertype = itemView.findViewById(R.id.usertype);
             emailBtn = itemView.findViewById(R.id.emailNow);
         }

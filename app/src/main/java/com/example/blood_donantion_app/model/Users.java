@@ -1,12 +1,12 @@
 package com.example.blood_donantion_app.model;
 
 public class Users {
-    String name, bloodgroup, id, email, type, phoneNo, idNumber, search;
+    String name, bloodgroup, id, email, type, phoneNo, idNumber, search, profilePictureurl;
 
     public Users() {
     }
 
-    public Users(String name, String bloodgroup, String id, String email, String type, String phoneNo, String idNumber, String search) {
+    public Users(String name, String bloodgroup, String id, String email, String type, String phoneNo, String idNumber, String search, String profilePictureurl) {
         this.name = name;
         this.bloodgroup = bloodgroup;
         this.id = id;
@@ -15,6 +15,7 @@ public class Users {
         this.phoneNo = phoneNo;
         this.idNumber = idNumber;
         this.search = search;
+        this.profilePictureurl = profilePictureurl;
     }
 
     public String getName() {
@@ -79,5 +80,13 @@ public class Users {
 
     public void setSearch(String search) {
         this.search = search;
+    }
+
+    public String getProfilePictureurl() {
+        return profilePictureurl;
+    }
+
+    public void setProfilePictureurl(String profilePictureurl) {
+        this.profilePictureurl = profilePictureurl;
     }
 }
