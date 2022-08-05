@@ -1,8 +1,8 @@
 <p align="center">
 
-# Girl-Rescue
+# Blood Donation
 
-This a simple application that i created for my junior year project . I was trying to learn about Navigation component,Kotlin coroutines,Room database,Firebase authenication,realtime database google maps and lifecycle.
+This a simple application that i created just to help blood recipient to contact the donor using email . The app is developed mainly in Java and using Firebase Database
 
 Min Api Level : 16 
 
@@ -15,10 +15,11 @@ Min Api Level : 16
 
 In order to get the app running yourself, you need to:
 
-1.  clone this project
-2.  Import the project into Android Studio
-3.  Connect the android device with USB or just use your emulator
-4.  In Android Studio, click on the "Run" button.
+1. clone this project
+2. Import the project into Android Studio
+3. Connect the android device with USB or just use your emulator
+4. In Android Studio, click on the "Run" button.
+5. Don't forget to add your email and password on the util class, Ensure the emails are real for the JavaMailApi to work 
 
 ## Libraries
 
