@@ -5,21 +5,27 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/check.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/feed.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/header_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/mail.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/navigation_selector.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/navigation_view_item_selected.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/person.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/phone.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_category_selected.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_ctegory_selected.xml" value="0.10092592592592593" />
         <entry key="app/src/main/res/layout/activity_donor_registration.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_recipient_registarion.xml" value="0.16748768472906403" />
         <entry key="app/src/main/res/layout/activity_select_registration.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_sent_email.xml" value="0.259375" />
         <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/header.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/user_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/output.xml" value="0.29876160990712075" />
+        <entry key="app/src/main/res/layout/user_layout.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.1" />
       </map>
     </option>

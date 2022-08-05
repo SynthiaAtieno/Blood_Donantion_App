@@ -146,7 +146,7 @@ public class Recipient_Registarion extends AppCompatActivity {
                                         userInfo.put("id", currentUseerId);
                                         userInfo.put("name", fullname);
                                         userInfo.put("email", email);
-                                        userInfo.put("id", idNo);
+                                        userInfo.put("idNumber", idNo);
                                         userInfo.put("phoneNo", phone);
                                         userInfo.put("bloodgroup", bloodgroup);
                                         userInfo.put("type", "Recipient");
