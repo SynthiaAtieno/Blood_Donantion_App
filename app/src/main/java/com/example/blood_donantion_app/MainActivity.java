@@ -3,7 +3,6 @@ package com.example.blood_donantion_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -11,8 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NavigationView navigationView;
     private TextView nav_fullname, nav_email, nav_type, nav_bloodgroup;
     private CircleImageView profile;
-    DatabaseReference userRef;
+    private DatabaseReference userRef;
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
     private List<Users> usersList;
@@ -101,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         linearLayoutManager.setStackFromEnd(true);
 
         recyclerView.setLayoutManager(linearLayoutManager);
+
         userRef = FirebaseDatabase.getInstance().getReference().child("users").child(
                 FirebaseAuth.getInstance().getCurrentUser().getUid());
         userRef.addValueEventListener(new ValueEventListener() {
@@ -126,6 +126,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     }
                     else {
                         profile.setImageResource(R.drawable.profile);;
+                    }
+                    Menu menu = navigationView.getMenu();
+                    if (type.equals("Donor"))
+                    {
+                        menu.findItem(R.id.sent_email).setTitle("Received Emails");
                     }
 
                 }
@@ -156,9 +161,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 usersList.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren());
+                for (DataSnapshot dataSnapshot : snapshot.getChildren())
                 {
-                    Users user = snapshot.getValue(Users.class);
+                    Users user = dataSnapshot.getValue(Users.class);
                     usersList.add(user);
                 }
                 userAdapter.notifyDataSetChanged();
@@ -185,9 +190,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 usersList.clear();
-                for (DataSnapshot dataSnapshot : snapshot.getChildren());
+                for (DataSnapshot dataSnapshot : snapshot.getChildren())
                 {
-                    Users user = snapshot.getValue(Users.class);
+                    Users user = dataSnapshot.getValue(Users.class);
                     usersList.add(user);
                 }
                 userAdapter.notifyDataSetChanged();
@@ -211,8 +216,67 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
        switch (item.getItemId())
        {
+           case R.id.aplus:
+               Intent intent = new Intent(MainActivity.this, CategorySelected.class);
+               intent.putExtra("group", "A+");
+               startActivity(intent);
+               break;
+
+           case R.id.aminus:
+               Intent intent1 = new Intent(MainActivity.this, CategorySelected.class);
+               intent1.putExtra("group", "A-");
+               startActivity(intent1);
+               break;
+
+           case R.id.bplus:
+               Intent intent2 = new Intent(MainActivity.this, CategorySelected.class);
+               intent2.putExtra("group", "B+");
+               startActivity(intent2);
+               break;
+
+           case R.id.bminus:
+               Intent intent3 = new Intent(MainActivity.this, CategorySelected.class);
+               intent3.putExtra("group", "B-");
+               startActivity(intent3);
+               break;
+
+           case R.id.abplus:
+               Intent intent4 = new Intent(MainActivity.this, CategorySelected.class);
+               intent4.putExtra("group", "AB+");
+               startActivity(intent4);
+               break;
+
+           case R.id.abminus:
+               Intent intent5 = new Intent(MainActivity.this, CategorySelected.class);
+               intent5.putExtra("group", "AB-");
+               startActivity(intent5);
+               break;
+
+           case R.id.oplus:
+               Intent intent6 = new Intent(MainActivity.this, CategorySelected.class);
+               intent6.putExtra("group", "O+");
+               startActivity(intent6);
+               break;
+
+           case R.id.ominus:
+               Intent intent7 = new Intent(MainActivity.this, CategorySelected.class);
+               intent7.putExtra("group", "O-");
+               startActivity(intent7);
+               break;
+
+           case R.id.compatible:
+               Intent intent8 = new Intent(MainActivity.this, CategorySelected.class);
+               intent8.putExtra("group", "Compatible with me");
+               startActivity(intent8);
+               break;
+
            case R.id.pofile:
                startActivity(new Intent(MainActivity.this, Profile.class));
+               finish();
+               break;
+
+           case R.id.sent_email:
+               startActivity(new Intent(MainActivity.this, SentEmail.class));
                finish();
                break;
 

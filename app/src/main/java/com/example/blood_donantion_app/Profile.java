@@ -91,6 +91,7 @@ public class Profile extends AppCompatActivity {
         switch (item.getItemId())
         {
             case android.R.id.home:
+                startActivity(new Intent(Profile.this, MainActivity.class));
                 finish();
                 return  true;
 
