@@ -9,12 +9,12 @@
     <item
         android:id="@+id/sent_email"
         android:icon="@drawable/mail"
-        android:title="Donors Email"/>
+        android:title="Donors Emailed"/>
 
     <item
         android:id="@+id/compatible"
         android:icon="@drawable/check"
-        android:title="Compatible"/>
+        android:title="Compatible with me"/>
 
     <item android:title="Blood Groups">
         <menu>
