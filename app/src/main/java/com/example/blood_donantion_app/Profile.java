@@ -91,6 +91,7 @@ public class Profile extends AppCompatActivity {
         {
             case android.R.id.home:
                 startActivity(new Intent(Profile.this, MainActivity.class));
+                Toast.maketext(getApplicationContext, "Home page", toast.LENGTH_LONG).show();
                 finish();
                 return  true;
 
